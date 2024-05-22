@@ -5,8 +5,8 @@ import "../globals.css";
 
 const header = () => {
   return (
-    <div className="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0 flex flex-row justify-between">
-      <div>
+    <div className="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0 flex flex-row justify-between mt-5">
+      <div> 
         <GrBlog className="size-9 m-4" />
       </div>
       <div className="flex content-center items-center gap-3">
@@ -36,7 +36,7 @@ const header = () => {
           <input
             type="search"
             id="default-search"
-            class="block w-40 p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 bg-transparent"
+            class="block w-20 p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 bg-transparent md:w-40"
             placeholder="Search..."
             required
           />
