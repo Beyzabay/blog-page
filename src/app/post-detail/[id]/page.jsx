@@ -38,7 +38,7 @@ const DetailPage = async ({ params }) => {
 </div>
 </div>
 <div className='md:mt-16 flex'>
-    <span className='text-muted text-m md:text-lg p-4'>{item.content}</span>
+    <span className='text-muted text-m md:text-lg p-4 mb-20'>{item.content}</span>
 </div>
 </div>
   );
