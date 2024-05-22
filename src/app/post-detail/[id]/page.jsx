@@ -2,6 +2,7 @@ import React from 'react';
 import { notFound } from 'next/navigation';
 import path from 'path';
 import fs from 'fs/promises';
+import Footer from '@/app/component/footer';
 
 // Statik olarak üretilmiş tüm id'leri alır
 export async function generateStaticParams() {
@@ -42,18 +43,4 @@ const DetailPage = async ({ params }) => {
 </div>
   );
 };
-
 export default DetailPage;
-
-
-{/* <div className="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0 h-40 flex flex-col md:justify-end md:items-center md:border-b-2">
-<div className='md:mb-5'>
-<div className='text-muted flex justify-center'>{item.date}</div>
-<div className="p-4">
-<span className="text-4xl md:text-4xl font-bold">{item.title}</span>
-</div>
-</div>
-</div>
-<div className='md:mb-10'>
-    <span className='text-muted text-m md:text-lg p-4'>{item.content}</span>
-</div> */}

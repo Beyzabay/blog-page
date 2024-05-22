@@ -24,7 +24,7 @@ const Page = () => {
     setCurrentPage(prevPage => prevPage - 1);
   };
 
-  // Gösterilecek verileri hesaplanır
+  // Gösterilecek veriler hesaplanır
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentItems = data.slice(startIndex, endIndex);
@@ -38,7 +38,9 @@ const Page = () => {
           <div key={index} className="pt-8 flex flex-row border-t">
             <div className="w-1/4 text-muted">{item.date}</div>
             <div className="w-3/4">
-              <div className="text-xl font-semibold">{item.title}</div>
+              <div className="text-xl font-semibold">
+                <a href={`./post-detail/${item.id}`}>
+                {item.title}</a></div>
               <div className="mt-4">{item.content.slice(0, 100)}</div>
               <div className="bg-transparent my-10">
                 <Link href={`./post-detail/${item.id}`} className="text-red-500">Read more →</Link>

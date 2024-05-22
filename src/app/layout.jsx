@@ -1,6 +1,7 @@
 import React from 'react'
 import Headers from './component/Header'
 import Providers from './Providers'
+import Footer from './component/footer'
 
 
 const layout = ({children}) => {
@@ -11,6 +12,7 @@ const layout = ({children}) => {
        <Headers/>
         {children}
         </Providers>
+        <Footer/>
       </body>
     </html>
   )

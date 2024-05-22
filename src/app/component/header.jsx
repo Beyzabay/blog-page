@@ -2,18 +2,20 @@ import React from "react";
 import { GrBlog } from "react-icons/gr";
 import { IoIosSunny } from "react-icons/io";
 import "../globals.css";
+import Link from "next/link";
 
 const header = () => {
   return (
     <div className="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0 flex flex-row justify-between mt-5">
-      <div> 
+      <div> <Link href="/">
         <GrBlog className="size-9 m-4" />
+        </Link>
       </div>
       <div className="flex content-center items-center gap-3">
         <ul className="flex flex-row gap-3">
+          <li><Link href="/">Anasayfa</Link></li>
           <li>Blog</li>
-          <li>Tags</li>
-          <li>Project</li>
+          <li>Hakkımızda</li>
         </ul>
         <div class="relative">
           <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
