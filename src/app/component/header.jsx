@@ -1,8 +1,9 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import { GrBlog } from "react-icons/gr";
-import { IoIosSunny } from "react-icons/io";
 import "../globals.css";
 import Link from "next/link";
+import ThemeComp from "./ThemeComp";
 
 const header = () => {
   return (
@@ -15,12 +16,11 @@ const header = () => {
         <ul className="flex flex-row gap-3">
           <li><Link href="/">Anasayfa</Link></li>
           <li>Blog</li>
-          <li>Hakkımızda</li>
         </ul>
         <div class="relative">
           <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
             <svg
-              class="w-4 h-4 text-black"
+              class="w-4 h-4 text-black dark:text-white"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -44,7 +44,7 @@ const header = () => {
           />
         </div>
         <div>
-            <IoIosSunny className="size-6"/>
+            <ThemeComp/>
         </div>
       </div>
     </div>

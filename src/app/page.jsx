@@ -48,18 +48,18 @@ const Page = () => {
               </div>
           </div>
         ))}
-        <div className="flex justify-between mt-4">
+        <div className="flex justify-between mb-40 ">
           <button 
             onClick={handlePreviousPage} 
             disabled={currentPage === 1}
-            className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
+            className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 text-black"
           >
             Previous
           </button>
           <button 
             onClick={handleNextPage} 
             disabled={endIndex >= data.length}
-            className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
+            className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 text-black"
           >
             Next
           </button>
