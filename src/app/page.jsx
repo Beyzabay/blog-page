@@ -1,6 +1,8 @@
-'use client'
+"use client"
 import React, { useState, useEffect } from "react";
 import './globals.css';
+import Link from "next/link";
+import Latest from './component/Latest'
 
 const Page = () => {
   const [data, setData] = useState([]);
@@ -8,7 +10,6 @@ const Page = () => {
   const itemsPerPage = 5;
 
   useEffect(() => {
-    // Verileri data.json'dan çek
     fetch('/data.json')
       .then(response => response.json())
       .then(data => setData(data))
@@ -23,7 +24,7 @@ const Page = () => {
     setCurrentPage(prevPage => prevPage - 1);
   };
 
-  // Gösterilecek verileri hesapla
+  // Gösterilecek verileri hesaplanır
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentItems = data.slice(startIndex, endIndex);
@@ -31,15 +32,16 @@ const Page = () => {
   return (
     <>
       <title>Blog</title>
+      <Latest/>
       <div className="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0 flex flex-col justify-between border-b-2">
         {currentItems.map((item, index) => (
           <div key={index} className="pt-8 flex flex-row border-t">
             <div className="w-1/4 text-muted">{item.date}</div>
             <div className="w-3/4">
               <div className="text-xl font-semibold">{item.title}</div>
-              <div className="mt-4">{item.content}</div>
+              <div className="mt-4">{item.content.slice(0, 100)}</div>
               <div className="bg-transparent my-10">
-                <a href="" className="text-red-500">Read more →</a>
+                <Link href={`./post-detail/${item.id}`} className="text-red-500">Read more →</Link>
               </div>
               </div>
           </div>
